@@ -1,0 +1,45 @@
+Part One: Solidify Terminology
+---
+In your own terms, define the following terms:
+
+What is HTTP?
+Hypertext transfer protocol -- the protocol (conventions, format, rules) by which data is sent to and from servers from our devices
+
+What is a URL?
+Uniform resource locator -- the unique address for a resource in a more readable format
+
+What is DNS?
+Domain name system -- converts readable URLs to the more technical IP addresses where resources are located
+
+What is a query string?
+Optional part of a URL where certain parameters can be passed to get a certain type of response from the server. E.g., search terms
+
+What are two HTTP verbs and how are they different?
+GET - read data from a server
+POST - send data to a server to make a change/do something
+
+What is an HTTP request?
+Sending data to a server from your device using hypertext transfer protocol
+
+What is an HTTP response?
+Receiving a response from the server in the format/conventions of hypertext transfer protocol
+
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+Paramter that can be passed along with an HTTP request/response to convey details about the request or the data within. Examples include Cookie, Content-Type, Host
+
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+First, the browser converts the URL to an IP address for the resource using DNS. Then, an HTTP request is sent to that address, and a response is received. The response is parsed/translated and rendered in the browser, which makes any additional requests it needs to load additional resources that might be included in the response (e.g., images).
+
+
+Part Two: Practice Tools
+---
+
+Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”.
+$ curl -H "Accept: text/plain" https://icanhazdadjoke.com/search
+
+Use dig to find what the IP address is for icanhazdadjoke.com.
+dig icanhazdadjoke.com
+172.67.198.173
+104.21.66.15
+
+(Additional exercises were done to explore some tools, but have no text answers to post here)
